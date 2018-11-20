@@ -3,4 +3,5 @@ Add ./ /code/
 RUN npm install
 RUN npm install -g pm2
 EXPOSE 3000
-ENTRYPOINT [ "pm2-docker", 'app.js' ]
+WORKDIR /code
+ENTRYPOINT [ "pm2-docker", "app.js" ]
